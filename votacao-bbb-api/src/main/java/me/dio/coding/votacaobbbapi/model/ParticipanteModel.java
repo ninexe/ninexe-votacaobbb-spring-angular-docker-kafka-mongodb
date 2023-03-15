@@ -1,5 +1,6 @@
 package me.dio.coding.votacaobbbapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,13 +10,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document("parametros")
-public class ParametroModel {
+@Document("participantes")
+public class ParticipanteModel {
 
     @Id
-    private String chave;
-    private String valor;
-
-
-
+    private String id;
+    private String nome;
+    private String urlFoto;
 }

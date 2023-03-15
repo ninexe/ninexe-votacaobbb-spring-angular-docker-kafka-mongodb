@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+
+  <h1 >{{title}}</h1>
+
+</mat-toolbar>
+<h1 fxLayoutAlign="center center" class="h1-center">Escolha um dos {{participantes?.length}} para sair</h1>
+<div class="content ">
+  <div class="card" fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="center center">
+    <div fxFlex="25%" fxFlex.xs="100%" fxflex.sm="33%" *ngFor="let participante of participantes">
+      <mat-card class="mat-elevation-z4">
+        <img mat-card-image src="{{participante.urlFoto}}" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <h2>
+            {{participante.nome}}
+          </h2>
+        </mat-card-content>
+        <mat-card-actions>
+          <form  name="form-votacao" action="registrar-votacao">
+            <button type="submit" mat-raised-button color="primary" name="id" [value]="participante.id">Votar</button>
+          </form>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+</div>
