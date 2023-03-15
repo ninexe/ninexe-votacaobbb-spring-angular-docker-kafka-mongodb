@@ -15,4 +15,6 @@ public class ParticipanteModel {
     @Id
     private String id;
     private String nome;
+
+    private String urlFoto;
 }

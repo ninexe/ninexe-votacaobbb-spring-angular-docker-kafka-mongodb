@@ -1,0 +1,10 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.content{
+
+  padding: 10vh;
+}
+.h1-center{
+  padding-top: 10vh;
+}
+

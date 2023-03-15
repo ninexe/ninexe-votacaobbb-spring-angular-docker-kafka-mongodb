@@ -8,11 +8,13 @@ import me.dio.coding.votacaobbbapi.repository.ParticipanteRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/participante")
 @AllArgsConstructor
+@CrossOrigin
 public class ParticipanteController {
 
 
@@ -31,5 +33,11 @@ public class ParticipanteController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(opt.get());
+    }
+
+    @GetMapping("/todos")
+    public ResponseEntity<List<ParticipanteModel>> consultar(){
+        List<ParticipanteModel> list = repository.findAll();
+        return ResponseEntity.ok(list);
     }
 }

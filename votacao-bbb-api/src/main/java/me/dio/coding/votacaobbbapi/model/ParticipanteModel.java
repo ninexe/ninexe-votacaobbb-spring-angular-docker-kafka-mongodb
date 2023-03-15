@@ -1,5 +1,6 @@
 package me.dio.coding.votacaobbbapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,4 +16,5 @@ public class ParticipanteModel {
     @Id
     private String id;
     private String nome;
+    private String urlFoto;
 }
